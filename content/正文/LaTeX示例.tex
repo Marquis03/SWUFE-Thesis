@@ -1,0 +1,210 @@
+\section{LaTeX示例}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+
+\subsection{图片}
+
+\subsubsection{基本}
+
+单张图片，如\cref{fig:西财Logo单图}。
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=0.3\linewidth]{img/swufe_logo.jpg}
+\caption{西财Logo}
+\label{fig:西财Logo单图}
+\end{figure}
+
+\subsubsection{多图并排，共享标题}
+
+多图并排，共享标题，如\cref{fig:西财Logo和小嗷犬}。
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}{0.5\linewidth}
+\centering
+\includegraphics[width=0.45\linewidth]{img/swufe_logo.jpg}
+\hfill
+\includegraphics[width=0.45\linewidth]{img/小嗷犬.png}
+\caption{西财Logo和小嗷犬}
+\label{fig:西财Logo和小嗷犬}
+\end{minipage}
+\end{figure}
+
+\subsubsection{多图并排，独立标题}
+
+多图并排，独立标题，如\cref{fig:西财Logo独立标题子图}、\cref{fig:小嗷犬独立标题子图}。
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}{0.7\linewidth}
+\centering
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=0.7\linewidth]{img/swufe_logo.jpg}
+\caption{西财Logo}
+\label{fig:西财Logo独立标题子图}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\linewidth}
+\centering
+\includegraphics[width=0.7\linewidth]{img/小嗷犬.png}
+\caption{小嗷犬}
+\label{fig:小嗷犬独立标题子图}
+\end{minipage}
+\end{minipage}
+\end{figure}
+
+\subsubsection{子图}
+
+子图，如\cref{fig:西财Logo子图和小嗷犬子图}、\cref{fig:西财Logo子图}、\cref{fig:小嗷犬子图}。
+
+\begin{figure}[htb]
+\centering
+\begin{minipage}{0.6\linewidth}
+\subcaptionbox{西财Logo子图\label{fig:西财Logo子图}}{\includegraphics[width=0.48\linewidth]{img/swufe_logo.jpg}}
+\hfill
+\subcaptionbox{小嗷犬子图\label{fig:小嗷犬子图}}{\includegraphics[width=0.48\linewidth]{img/小嗷犬.png}}
+\caption{西财Logo子图和小嗷犬子图}
+\label{fig:西财Logo子图和小嗷犬子图}
+\end{minipage}
+\end{figure}
+
+\subsection{表格}
+
+\subsubsection{三线表}
+
+三列左对齐，如\cref{tab:三线表1}。
+
+\begin{table}[htb]
+\caption{三线表1}
+\label{tab:三线表1}
+\centering
+\renewcommand{\arraystretch}{1}
+\begin{tabularx}{\textwidth}{LLL}
+\toprule
+\textbf{第一列} & \textbf{第二列} & \textbf{第三列} \\
+\midrule
+A & 1 & 2 \\
+B & 3 & 4 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+三列右对齐，如\cref{tab:三线表2}。
+
+\begin{table}[htb]
+\caption{三线表2}
+\label{tab:三线表2}
+\centering
+\renewcommand{\arraystretch}{1}
+\begin{tabularx}{\textwidth}{RRR}
+\toprule
+\textbf{第一列} & \textbf{第二列} & \textbf{第三列} \\
+\midrule
+A & 1 & 2 \\
+B & 3 & 4 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+第一列左对齐，第二列居中对齐，第三列右对齐，如\cref{tab:三线表3}。
+
+\begin{table}[htb]
+\caption{三线表3}
+\label{tab:三线表3}
+\centering
+\renewcommand{\arraystretch}{1}
+\begin{tabularx}{\textwidth}{LCR}
+\toprule
+\textbf{第一列} & \textbf{第二列} & \textbf{第三列} \\
+\midrule
+A & 1 & 2 \\
+B & 3 & 4 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{公式}
+
+\subsubsection{基本}
+
+行内公式：$E=mc^2$。
+
+行间公式：
+
+$$
+E=mc^2
+$$
+
+\subsubsection{编号}
+
+带编号的公式，如\cref{eq:质能方程}。
+
+\begin{equation}
+E=mc^2
+\label{eq:质能方程}
+\end{equation}
+
+\subsection{代码}
+
+\lstinputlisting[language=Python]{code/bubble_sort.py}
+
+\subsection{算法}
+
+如\cref{alg:冒泡排序算法}。
+
+\begin{algorithm}[htb]
+\caption{冒泡排序算法}
+\label{alg:冒泡排序算法}
+\KwIn{无序数组 $A[1 \dots n]$}
+\KwOut{排序后的数组 $A$}
+\For{$i = 1$ \KwTo $n-1$}{
+    \For{$j = 1$ \KwTo $n-i$}{
+        \If{$A[j] > A[j+1]$}{
+            交换 $A[j]$ 和 $A[j+1]$
+        }
+    }
+}
+\end{algorithm}
+
+\subsection{列表}
+
+\subsubsection{无序列表}
+
+\begin{itemize}
+    \item 第一项内容
+    \item 第二项内容
+\end{itemize}
+
+\subsubsection{有序列表}
+
+\begin{enumerate}
+    \item 第一项内容
+    \item 第二项内容
+\end{enumerate}
+
+\subsubsection{嵌套列表}
+
+\begin{enumerate}
+    \item 内容1
+    \begin{enumerate}
+        \item 内容2
+        \item 内容3
+    \end{enumerate}
+    \item 内容4
+\end{enumerate}
+
+\subsection{引用}
+
+我引用西瓜书\cite{西瓜书}。
+
+我引用ResNet\cite{ResNet}。
+
+我引用Transformer\cite{Transformer}。
+
+我引用ResNet和Transformer\cite{ResNet, Transformer}。
+
+我引用西瓜书和Transformer\cite{西瓜书, Transformer}。
+
+我引用西瓜书、ResNet和Transformer\cite{西瓜书, ResNet, Transformer}。
