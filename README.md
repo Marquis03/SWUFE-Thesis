@@ -8,6 +8,13 @@ SWUFE 西南财经大学 LaTeX 本科毕业论文模板，适用于 Overleaf
 
 如遇使用 bug 或有改进建议，欢迎提出 issue。
 
+## 使用方法
+
+1. 下载最新的 zip 文件 [https://github.com/Marquis03/SWUFE-Thesis/archive/refs/heads/main.zip](https://github.com/Marquis03/SWUFE-Thesis/archive/refs/heads/main.zip)
+2. 在 Overleaf 中创建一个新项目，选择上传项目，上传刚刚下载的 zip 文件
+3. 修改 Overleaf 编译器为 XeLaTeX
+4. 开始编写您的论文
+
 ## 格式要求实现情况
 
 ### 字数
