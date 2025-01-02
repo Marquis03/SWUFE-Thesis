@@ -13,6 +13,8 @@
 \RequirePackage[dvipsnames]{xcolor}  % 颜色支持
 \RequirePackage{pdfpages}  % 插入pdf支持
 \RequirePackage{hyperref}  % 超链接
+\RequirePackage{tcolorbox}
+\RequirePackage{amsmath}
 \hypersetup{
     hidelinks,
     pdftitle={西南财经大学本科毕业论文模板},
