@@ -15,6 +15,7 @@
 \RequirePackage{hyperref}  % 超链接
 \RequirePackage{tcolorbox}
 \RequirePackage{amsmath}
+\RequirePackage[numbers,sort&compress]{natbib}
 \hypersetup{
     hidelinks,
     pdftitle={西南财经大学本科毕业论文模板},
