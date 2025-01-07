@@ -15,6 +15,7 @@
 \RequirePackage{hyperref}  % 超链接
 \RequirePackage{tcolorbox}
 \RequirePackage{amsmath}
+\RequirePackage{bbding}
 \RequirePackage[numbers,sort&compress]{natbib}
 \hypersetup{
     hidelinks,
