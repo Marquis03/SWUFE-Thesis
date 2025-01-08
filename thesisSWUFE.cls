@@ -15,6 +15,7 @@
 \RequirePackage{hyperref}  % 超链接
 \RequirePackage{tcolorbox}
 \RequirePackage{amsmath}
+\RequirePackage{amssymb}
 \RequirePackage{bbding}
 \RequirePackage{etoolbox}
 \RequirePackage{lmodern}
