@@ -140,6 +140,10 @@
 \AfterEndEnvironment{figure}{\zihao{-4}}
 \BeforeBeginEnvironment{table}{\zihao{5}}
 \AfterEndEnvironment{table}{\zihao{-4}}
+\BeforeBeginEnvironment{tabular}{\zihao{5}}
+\AfterEndEnvironment{tabular}{\zihao{-4}}
+\BeforeBeginEnvironment{tabularx}{\zihao{5}}
+\AfterEndEnvironment{tabularx}{\zihao{-4}}
 
 
 % 表支持
