@@ -16,6 +16,8 @@
 \RequirePackage{tcolorbox}
 \RequirePackage{amsmath}
 \RequirePackage{bbding}
+\RequirePackage{etoolbox}
+\RequirePackage{lmodern}
 \RequirePackage[numbers,sort&compress]{natbib}
 \hypersetup{
     hidelinks,
