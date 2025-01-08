@@ -137,7 +137,9 @@
 
 % 图表内容5号字
 \BeforeBeginEnvironment{figure}{\zihao{5}}
+\AfterEndEnvironment{figure}{\zihao{-4}}
 \BeforeBeginEnvironment{table}{\zihao{5}}
+\AfterEndEnvironment{table}{\zihao{-4}}
 
 
 % 表支持
