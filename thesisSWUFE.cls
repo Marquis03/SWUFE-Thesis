@@ -18,6 +18,7 @@
 \RequirePackage{amssymb}
 \RequirePackage{bbding}
 \RequirePackage{etoolbox}
+\RequirePackage{footnpag}
 \RequirePackage{lmodern}
 \RequirePackage[numbers,sort&compress]{natbib}
 \hypersetup{
