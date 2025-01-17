@@ -20,6 +20,7 @@
 \RequirePackage{etoolbox}
 \RequirePackage{footnpag}
 \RequirePackage{lmodern}
+\RequirePackage{appendix}
 \RequirePackage[numbers,sort&compress]{natbib}
 \hypersetup{
     hidelinks,
