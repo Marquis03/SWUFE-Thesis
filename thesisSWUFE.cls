@@ -21,6 +21,7 @@
 \RequirePackage{footnpag}
 \RequirePackage{lmodern}
 \RequirePackage{appendix}
+\RequirePackage{multirow}
 \RequirePackage[numbers,sort&compress]{natbib}
 \hypersetup{
     hidelinks,
