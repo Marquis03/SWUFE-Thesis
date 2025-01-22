@@ -13,7 +13,6 @@
 \RequirePackage[dvipsnames]{xcolor}  % 颜色支持
 \RequirePackage{pdfpages}  % 插入pdf支持
 \RequirePackage{hyperref}  % 超链接
-\RequirePackage{tcolorbox}
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{bbding}
@@ -32,6 +31,9 @@
 }
 
 \urlstyle{same}
+
+\RequirePackage{tcolorbox}
+\tcbuselibrary{breakable}
 
 \RequirePackage{fontspec}  % 字体支持
 \setmainfont{Times New Roman}  % 英文mainfont Times New Roman
