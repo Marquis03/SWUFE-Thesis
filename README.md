@@ -84,3 +84,7 @@ SWUFE 西南财经大学 LaTeX 本科毕业论文模板，适用于 Overleaf
 
 - [x] 严禁使用尾注来制作参考文献
 - [x] 参考文献的著录应符合国家标准（GB/T 7714-2015），参考文献的序号左顶格，并用数字加方括号表示，如“[1]”。每一条参考文献著录均以“.”结束
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Marquis03/SWUFE-Thesis&type=Date)](https://star-history.com/#Marquis03/SWUFE-Thesis&Date)
