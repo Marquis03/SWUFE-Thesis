@@ -79,6 +79,7 @@
 \RequirePackage{indentfirst}  % 首段缩进
 \setlength{\parindent}{2em}  % 首行缩进2字符
 \setlength{\parskip}{0pt}  % 段间距0
+\setlength{\bibsep}{0em}
 
 \RequirePackage{titlesec}  % 标题支持
 
