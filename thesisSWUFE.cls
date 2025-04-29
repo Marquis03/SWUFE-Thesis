@@ -201,7 +201,9 @@
 
 % 列表
 \RequirePackage{enumitem}
-\setlist[itemize]{noitemsep, leftmargin=2em}
+\setlist[itemize]{noitemsep, parsep=0pt, topsep=0pt}
+\setlist[enumerate]{noitemsep, parsep=0pt, topsep=0pt}
+\setlist[description]{noitemsep, parsep=0pt, topsep=0pt}
 
 % ref格式
 \RequirePackage{cleveref}
