@@ -12,7 +12,6 @@
 ]{geometry}  % 纸张与页边距格式
 \RequirePackage[dvipsnames]{xcolor}  % 颜色支持
 \RequirePackage{pdfpages}  % 插入pdf支持
-\RequirePackage{hyperref}  % 超链接
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
 \RequirePackage{bbding}
@@ -22,6 +21,8 @@
 \RequirePackage{multirow}
 \RequirePackage[numbers,sort&compress]{natbib}
 \RequirePackage[perpage,stable,flushmargin]{footmisc}
+
+\RequirePackage{hyperref}  % 超链接
 \hypersetup{
     hidelinks,
     pdftitle={西南财经大学本科毕业论文模板},
@@ -29,7 +30,6 @@
     % pdfsubject={主题},
     % pdfkeywords={关键词}
 }
-
 \urlstyle{same}
 
 \RequirePackage{tcolorbox}
