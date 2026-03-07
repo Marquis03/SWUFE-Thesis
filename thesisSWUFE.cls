@@ -19,7 +19,7 @@
 \RequirePackage{lmodern}
 \RequirePackage{appendix}
 \RequirePackage{multirow}
-\RequirePackage[numbers,sort&compress]{natbib}
+\RequirePackage{gbt7714}
 \RequirePackage[perpage,stable,flushmargin]{footmisc}
 
 \RequirePackage{hyperref}  % 超链接
@@ -106,8 +106,6 @@
 % 注释、脚注内容 小五号宋体或Time New Roman
 \renewcommand{\footnotesize}{\songti\zihao{-5}}
 
-% 参考文献
-\renewcommand{\refname}{参考文献}
 
 % 页码 居中、小五号阿拉伯数字
 \RequirePackage{fancyhdr}
