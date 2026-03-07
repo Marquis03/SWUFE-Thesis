@@ -243,9 +243,11 @@
 \newcommand{\coverdate}[1]{\renewcommand{\cover@date}{#1}}
 
 % 封面表单行：\coverfield{标签宽度}{标签}{值}
+\newlength{\coverfieldwidth}
+\setlength{\coverfieldwidth}{9cm}
 \newcommand{\coverfield}[3]{%
     \bfseries\makebox[#1][s]{#2}：%
-    \rlap{\rule[-0.5ex]{9cm}{1pt}}\makebox[9cm][c]{#3}%
+    \rlap{\rule[-0.5ex]{\coverfieldwidth}{1pt}}\makebox[\coverfieldwidth][c]{#3}%
 }
 
 % 生成封面
