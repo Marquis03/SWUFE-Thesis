@@ -19,7 +19,7 @@
 \RequirePackage{lmodern}
 \RequirePackage{appendix}
 \RequirePackage{multirow}
-\RequirePackage[numbers,sort&compress]{natbib}
+\RequirePackage{gbt7714}
 \RequirePackage[perpage,stable,flushmargin]{footmisc}
 
 \RequirePackage{hyperref}  % 超链接
@@ -73,6 +73,12 @@
 ]  % 华文中宋
 \newcommand{\hwzhongsong}{\CJKfamily{hwzhongsong}}
 
+\setCJKfamilyfont{fangsong}{STFangsong}[
+    Path = ./fonts/,
+    Extension = .ttf,
+    AutoFakeBold=true,
+]  % 华文仿宋
+\newcommand{\fangsong}{\CJKfamily{fangsong}}
 
 \setlength{\baselineskip}{12pt}  % 基础行距12pt
 \linespread{1.5}  % 1.5倍行距
@@ -106,8 +112,6 @@
 % 注释、脚注内容 小五号宋体或Time New Roman
 \renewcommand{\footnotesize}{\songti\zihao{-5}}
 
-% 参考文献
-\renewcommand{\refname}{参考文献}
 
 % 页码 居中、小五号阿拉伯数字
 \RequirePackage{fancyhdr}
@@ -166,6 +170,7 @@
 % 代码
 \RequirePackage{listings}
 \definecolor{codegreen}{rgb}{0, 0.6, 0}
+\definecolor{swufeblue}{RGB}{0, 113, 188}
 \newfontfamily\yaheiconsola{YaHei Consolas Hybrid 1.12}[
     Path = ./fonts/,
     Extension = .ttf,
@@ -215,3 +220,75 @@
 \Crefname{equation}{公式}{公式}
 \crefname{algorithm}{算法}{算法}
 \Crefname{algorithm}{算法}{算法}
+
+% ========== 封面 ==========
+
+% 封面信息存储命令
+\newcommand{\cover@title}{}
+\newcommand{\cover@college}{}
+\newcommand{\cover@major}{}
+\newcommand{\cover@author}{}
+\newcommand{\cover@studentid}{}
+\newcommand{\cover@grade}{}
+\newcommand{\cover@advisor}{}
+\newcommand{\cover@date}{}
+
+\newcommand{\covertitle}[1]{\renewcommand{\cover@title}{#1}}
+\newcommand{\covercollege}[1]{\renewcommand{\cover@college}{#1}}
+\newcommand{\covermajor}[1]{\renewcommand{\cover@major}{#1}}
+\newcommand{\coverauthor}[1]{\renewcommand{\cover@author}{#1}}
+\newcommand{\coverstudentid}[1]{\renewcommand{\cover@studentid}{#1}}
+\newcommand{\covergrade}[1]{\renewcommand{\cover@grade}{#1}}
+\newcommand{\coveradvisor}[1]{\renewcommand{\cover@advisor}{#1}}
+\newcommand{\coverdate}[1]{\renewcommand{\cover@date}{#1}}
+
+% 封面表单行：\coverfield{标签宽度}{标签}{值}
+\newlength{\coverfieldwidth}
+\setlength{\coverfieldwidth}{9cm}
+\newcommand{\coverfield}[3]{%
+    \bfseries\makebox[#1][s]{#2}：%
+    \rlap{\rule[-0.5ex]{\coverfieldwidth}{1pt}}\makebox[\coverfieldwidth][c]{#3}%
+}
+
+% 生成封面
+\newcommand{\makecover}{%
+    \begin{titlepage}
+        \centering
+        \vspace*{1cm}
+
+        % 书法校名
+        \includegraphics[width=10cm]{swufe/swufe_title.pdf}
+
+        \vspace{0.6cm}
+
+        % "本科毕业论文（设计）"
+        {\hwzhongsong\bfseries\fontsize{36pt}{36pt}\selectfont 本科毕业论文（设计）}
+
+        \vspace{1.2cm}
+
+        % 校徽
+        \includegraphics[width=3.2cm]{swufe/swufe_logo.pdf}
+
+        \vspace{0.6cm}
+
+        % 表单区域
+        {\fangsong\zihao{3}\linespread{1.85}\selectfont
+            \coverfield{4.2em}{论文题目}{\cover@title}\par
+            \coverfield{4.2em}{所在学院}{\cover@college}\par
+            \coverfield{4.2em}{专\hfill 业}{\cover@major}\par
+            \coverfield{4.2em}{学生姓名}{\cover@author}\par
+            \coverfield{4.2em}{学\hfill 号}{\cover@studentid}\par
+            \coverfield{4.2em}{年\hfill 级}{\cover@grade}\par
+            \coverfield{4.2em}{指导教师}{\cover@advisor}\par
+        }
+
+        \vfill
+
+        \vspace{0.5cm}
+
+        % 底部日期
+        {\fangsong\bfseries\zihao{3}\cover@date}
+
+        \vspace{1.5cm}
+    \end{titlepage}
+}
